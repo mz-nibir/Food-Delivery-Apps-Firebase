@@ -19,7 +19,7 @@ public class SplashScreen extends AppCompatActivity {
         handeler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashScreen.this, MainActivity.class));
+                startActivity(new Intent(SplashScreen.this, LoginActivity.class));
                 finish();
 
             }
