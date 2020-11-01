@@ -3,6 +3,9 @@ package com.nibir.fooddelivery;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.nibir.fooddelivery.model.Restaurant;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -25,6 +28,22 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+
+
+        SentDataToFireStore();
+    }
+
+    private void SentDataToFireStore() {
+
+        FirebaseFirestore db= FirebaseFirestore.getInstance();
+
+        CollectionReference reference = db.collection("Restaurents");
+        Restaurant myRestaurent = new Restaurant();
+        myRestaurent.setRestaurentName("Nibir Restaurents");
+        myRestaurent.setRestaurentDescription("Best restaurent in Dhaka");
+        myRestaurent.setRestaurentLocation("Bashundhara,Dhaka");
+
+
     }
 
 }
