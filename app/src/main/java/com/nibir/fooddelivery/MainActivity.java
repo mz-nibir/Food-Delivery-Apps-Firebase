@@ -35,33 +35,28 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
 
 
-        //SentDataToFireStore();
+     //   SentDataToFireStore();
 
-        GetDataFromFirestore();
-    }
-
-    private void GetDataFromFirestore() {
-        FirebaseFirestore db= FirebaseFirestore.getInstance();
     }
 
     private void SentDataToFireStore() {
 
         FirebaseFirestore db= FirebaseFirestore.getInstance();
 
-        CollectionReference reference = db.collection("Restaurents");
-        Restaurant myRestaurent = new Restaurant();
-        myRestaurent.setRestaurentName("Nibir Restaurents");
-        myRestaurent.setRestaurentDescription("Best restaurent in Dhaka");
-        myRestaurent.setRestaurentLocation("Bashundhara,Dhaka");
-        myRestaurent.setRestaurentImgUrl("https://img.jakpost.net/c/2016/09/29/2016_09_29_12990_1475116504._large.jpg");
+        CollectionReference reference = db.collection("Restaurants");
+        Restaurant myRestaurant = new Restaurant();
+        myRestaurant.setRestaurantName("Nibir Restaurants");
+        myRestaurant.setRestaurantDescription("Best restaurant in Dhaka");
+        myRestaurant.setRestaurantLocation("Bashundhara,Dhaka");
+        myRestaurant.setRestaurantImgUrl("https://img.jakpost.net/c/2016/09/29/2016_09_29_12990_1475116504._large.jpg");
 
-        reference.add(myRestaurent).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
+        reference.add(myRestaurant).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
             @Override
             public void onComplete(@NonNull Task<DocumentReference> task) {
                 if(task.isSuccessful()){
-                    Toast.makeText(MainActivity.this, "Restaurent Uploaded", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Restaurant Uploaded", Toast.LENGTH_SHORT).show();
                 }else{
-                    Toast.makeText(MainActivity.this, "Sorry nit success ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Sorry not success", Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -3,53 +3,53 @@ package com.nibir.fooddelivery.model;
 import java.util.List;
 
 public class Restaurant {
-    String restaurentName;
-    String restaurentDescription;
-    String restaurentImgUrl;
-    String restaurentLocation;
+    String restaurantName;
+    String restaurantDescription;
+    String restaurantImgUrl;
+    String restaurantLocation;
 
-    List<MenuItem> restaurentMenuList;
+    List<MenuItem> restaurantMenuList;
 
     public Restaurant() {
     }
 
-    public String getRestaurentName() {
-        return restaurentName;
+    public String getRestaurantName() {
+        return restaurantName;
     }
 
-    public void setRestaurentName(String restaurentName) {
-        this.restaurentName = restaurentName;
+    public void setRestaurantName(String restaurantName) {
+        this.restaurantName = restaurantName;
     }
 
-    public String getRestaurentDescription() {
-        return restaurentDescription;
+    public String getRestaurantDescription() {
+        return restaurantDescription;
     }
 
-    public void setRestaurentDescription(String restaurentDescription) {
-        this.restaurentDescription = restaurentDescription;
+    public void setRestaurantDescription(String restaurantDescription) {
+        this.restaurantDescription = restaurantDescription;
     }
 
-    public String getRestaurentImgUrl() {
-        return restaurentImgUrl;
+    public String getRestaurantImgUrl() {
+        return restaurantImgUrl;
     }
 
-    public void setRestaurentImgUrl(String restaurentImgUrl) {
-        this.restaurentImgUrl = restaurentImgUrl;
+    public void setRestaurantImgUrl(String restaurantImgUrl) {
+        this.restaurantImgUrl = restaurantImgUrl;
     }
 
-    public String getRestaurentLocation() {
-        return restaurentLocation;
+    public String getRestaurantLocation() {
+        return restaurantLocation;
     }
 
-    public void setRestaurentLocation(String restaurentLocation) {
-        this.restaurentLocation = restaurentLocation;
+    public void setRestaurantLocation(String restaurantLocation) {
+        this.restaurantLocation = restaurantLocation;
     }
 
-    public List<MenuItem> getRestaurentMenuList() {
-        return restaurentMenuList;
+    public List<MenuItem> getRestaurantMenuList() {
+        return restaurantMenuList;
     }
 
-    public void setRestaurentMenuList(List<MenuItem> restaurentMenuList) {
-        this.restaurentMenuList = restaurentMenuList;
+    public void setRestaurantMenuList(List<MenuItem> restaurantMenuList) {
+        this.restaurantMenuList = restaurantMenuList;
     }
 }
