@@ -35,7 +35,13 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
 
 
-        SentDataToFireStore();
+        //SentDataToFireStore();
+
+        GetDataFromFirestore();
+    }
+
+    private void GetDataFromFirestore() {
+        FirebaseFirestore db= FirebaseFirestore.getInstance();
     }
 
     private void SentDataToFireStore() {
