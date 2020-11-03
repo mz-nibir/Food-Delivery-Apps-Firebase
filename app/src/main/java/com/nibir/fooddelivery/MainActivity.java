@@ -1,6 +1,7 @@
 package com.nibir.fooddelivery;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -8,7 +9,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.google.gson.internal.$Gson$Preconditions;
 import com.nibir.fooddelivery.model.Restaurant;
 
 import androidx.annotation.NonNull;
@@ -19,6 +23,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +42,11 @@ public class MainActivity extends AppCompatActivity {
 
      //   SentDataToFireStore();
 
+
     }
+
+
+
 
     private void SentDataToFireStore() {
 
