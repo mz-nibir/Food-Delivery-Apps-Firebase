@@ -13,6 +13,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.gson.internal.$Gson$Preconditions;
+import com.nibir.fooddelivery.model.DataController;
 import com.nibir.fooddelivery.model.Restaurant;
 import com.nibir.fooddelivery.model.RestaurantInterface;
 
@@ -26,6 +27,7 @@ import androidx.navigation.ui.NavigationUI;
 public class MainActivity extends AppCompatActivity implements RestaurantInterface {
     private static final String TAG = "MainActivity";
     RestaurantInterface restaurantInterface;
+    DataController controller;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,10 @@ public class MainActivity extends AppCompatActivity implements RestaurantInterfa
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         restaurantInterface=this;
+
+        controller=DataController.getInstance();
+        controller.setRestaurantInterface(restaurantInterface);
+
 
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
