@@ -3,12 +3,12 @@ package com.nibir.fooddelivery.model;
 public class MenuItem {
     String itemName;
     String itemDescription;
-    String itemPrice;
+    int itemPrice;
 
     public MenuItem() {
     }
 
-    public MenuItem(String itemName, String itemDescription, String itemPrice) {
+    public MenuItem(String itemName, String itemDescription, int itemPrice) {
         this.itemName = itemName;
         this.itemDescription = itemDescription;
         this.itemPrice = itemPrice;
@@ -30,11 +30,11 @@ public class MenuItem {
         this.itemDescription = itemDescription;
     }
 
-    public String getItemPrice() {
+    public int getItemPrice() {
         return itemPrice;
     }
 
-    public void setItemPrice(String itemPrice) {
+    public void setItemPrice(int itemPrice) {
         this.itemPrice = itemPrice;
     }
 }
