@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.nibir.fooddelivery.R;
+import com.nibir.fooddelivery.model.DataController;
 import com.nibir.fooddelivery.model.Restaurant;
 import com.squareup.picasso.Picasso;
 
@@ -63,6 +64,8 @@ public class HomeRecyclerAdapter extends RecyclerView.Adapter<HomeRecyclerAdapte
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    Restaurant current= allRestaurants.get(getAdapterPosition());
+                    DataController.instance.getRestaurantInterface().onRestaurentClick(current);
 
                 }
             });
