@@ -60,6 +60,12 @@ public class HomeRecyclerAdapter extends RecyclerView.Adapter<HomeRecyclerAdapte
             restaurantImage= itemView.findViewById(R.id.restaurantImageView);
             restaurantName=itemView.findViewById(R.id.restaurantNameTextView);
             restaurantDescription=itemView.findViewById(R.id.restaurantDescriptionTextview);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
         }
     }
 
