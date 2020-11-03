@@ -29,6 +29,6 @@
     <fragment
         android:id="@+id/navigation_menu"
         android:name="com.nibir.fooddelivery.ui.menu.MenuFragment"
-        android:label="@string/title_notifications"
+        android:label="@string/title_manu"
         tools:layout="@layout/fragment_menu" />
 </navigation>
