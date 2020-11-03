@@ -1,5 +1,7 @@
 package com.nibir.fooddelivery.model;
 
+import java.util.List;
+
 public class DataController {
     public  static  DataController instance;
 
@@ -13,6 +15,7 @@ public class DataController {
 
 
     RestaurantInterface restaurantInterface;
+    List<MenuItem> currentMenuItemList;
 
     public RestaurantInterface getRestaurantInterface() {
         return restaurantInterface;
@@ -20,6 +23,14 @@ public class DataController {
 
     public void setRestaurantInterface(RestaurantInterface restaurantInterface) {
         this.restaurantInterface = restaurantInterface;
+    }
+
+    public List<MenuItem> getCurrentMenuItemList() {
+        return currentMenuItemList;
+    }
+
+    public void setCurrentMenuItemList(List<MenuItem> currentMenuItemList) {
+        this.currentMenuItemList = currentMenuItemList;
     }
 }
 

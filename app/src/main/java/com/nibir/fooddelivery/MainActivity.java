@@ -98,6 +98,8 @@ public class MainActivity extends AppCompatActivity implements RestaurantInterfa
 
     @Override
     public void onRestaurentClick(Restaurant restaurant) {
+
+        controller.setCurrentMenuItemList(restaurant.getRestaurantMenuList());
         navController.navigate(R.id.action_navigation_home_to_navigation_menu);
 
 
