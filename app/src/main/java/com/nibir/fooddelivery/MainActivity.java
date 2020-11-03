@@ -14,6 +14,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.gson.internal.$Gson$Preconditions;
 import com.nibir.fooddelivery.model.DataController;
+import com.nibir.fooddelivery.model.MenuItem;
 import com.nibir.fooddelivery.model.Restaurant;
 import com.nibir.fooddelivery.model.RestaurantInterface;
 
@@ -23,6 +24,9 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements RestaurantInterface {
     private static final String TAG = "MainActivity";
@@ -51,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements RestaurantInterfa
         NavigationUI.setupWithNavController(navView, navController);
 
 
-     //   SentDataToFireStore();
+      SentDataToFireStore();
 
 
     }
@@ -69,6 +73,14 @@ public class MainActivity extends AppCompatActivity implements RestaurantInterfa
         myRestaurant.setRestaurantDescription("Best restaurant in Dhaka");
         myRestaurant.setRestaurantLocation("Bashundhara,Dhaka");
         myRestaurant.setRestaurantImgUrl("https://img.jakpost.net/c/2016/09/29/2016_09_29_12990_1475116504._large.jpg");
+
+        List<MenuItem> myMenus = new ArrayList<>();
+        for (int i=0;i <15;i++){
+            myMenus.add(new MenuItem("Mutton Kacchi","Khub e Testy",350));
+
+        }
+        myRestaurant.setRestaurantMenuList(myMenus);
+
 
         reference.add(myRestaurant).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
             @Override

@@ -8,6 +8,12 @@ public class MenuItem {
     public MenuItem() {
     }
 
+    public MenuItem(String itemName, String itemDescription, String itemPrice) {
+        this.itemName = itemName;
+        this.itemDescription = itemDescription;
+        this.itemPrice = itemPrice;
+    }
+
     public String getItemName() {
         return itemName;
     }
