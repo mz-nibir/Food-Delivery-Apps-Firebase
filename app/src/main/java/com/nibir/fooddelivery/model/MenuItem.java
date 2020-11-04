@@ -1,9 +1,12 @@
 package com.nibir.fooddelivery.model;
 
+import android.widget.TextView;
+
 public class MenuItem {
     String itemName;
     String itemDescription;
     int itemPrice;
+    
 
     public MenuItem() {
     }
@@ -22,12 +25,14 @@ public class MenuItem {
         this.itemName = itemName;
     }
 
+
     public String getItemDescription() {
         return itemDescription;
     }
 
     public void setItemDescription(String itemDescription) {
         this.itemDescription = itemDescription;
+
     }
 
     public int getItemPrice() {
